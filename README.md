@@ -2,4 +2,4 @@
 
 A personal programming blog
 
-Visit http://ducktyper.co.nz
+Visit http://blog.ducktyper.co.nz
