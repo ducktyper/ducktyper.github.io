@@ -19,14 +19,14 @@ using Angular2.
 
 ## Setup development environment
 
-It took 3 days to just setup the development environment. At first, I was looking for
+It took 3 nights to just setup the development environment. At first, I was looking for
 an easy way to integrate into Rails. However, there was no angular2 gem and I failed
 to make typescript modules working with Rails assets pipeline.
 
 I gave up on that solution and decided to use what Angular2 project recommands.
 Angular2 website has a tutorial `5 Min Quick Start`. This project uses `lite-server`
 to serve assets and `systemjs` to load modules. It seemed like it uses too many
-javascript libriaries and npm packages to start with. However the result was impressive.
+javascript libriaries and npm packages to start with but the result was impressive.
 lite-server provides assets and systemjs dynamically loads typescript files
 from the server as needed and run them after transpiling in the browser.
 
