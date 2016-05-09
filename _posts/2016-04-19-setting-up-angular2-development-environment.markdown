@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Setting up Angular2 development environment"
-categories: notes
+categories: angular
 ---
 
 Recently we decided to use Angular2 with Typescript for our new project. My position
