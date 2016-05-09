@@ -4,8 +4,6 @@ title:  "Setting up Angular2 project"
 categories: notes
 ---
 
-# Setting up Angular2 project
-
 Recently we decided to use Angular2 with Typescript for our new project. My position
 was to learn Angular2 and guide University interns to work on the project. The
 first thing I did was setting up the development environment for interns so
