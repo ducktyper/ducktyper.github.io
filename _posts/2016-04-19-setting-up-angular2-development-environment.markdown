@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Setting up Angular2 project"
+title:  "Setting up Angular2 development environment"
 categories: notes
 ---
 
