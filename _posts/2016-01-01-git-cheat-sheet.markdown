@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Git"
+title:  "Git Cheat Sheet"
 categories: notes
 ---
 
-# Install git
+## Install git
 
 * Install on ubuntu
 
@@ -33,7 +33,7 @@ chmod 700 ~/.ssh
 ssh-keygen -t rsa
 ```
 
-# Use a bare repository
+## Use a bare repository
 
 A bare repository is a host repository where users can clone and push. Here
 is a way to create a bare repository in a server and make the first commit
@@ -62,7 +62,7 @@ git remote -v          # check remote is set correctly
 git push origin master # push changes to the server
 ```
 
-# Commit process
+## Commit process
 
 ```
 git status                  # see changes from the last commit
@@ -73,25 +73,25 @@ git reset <filename>        # remove a file from stage
 git commit -m "commit files in stage with this message"
 ```
 
-# Use branch for a new task
+## Use branch for a new task
 
 ```
-# create and move to a branch
+## create and move to a branch
 git branch <task_name>
 git checkout <task_name>
-# check which branch you are in
+## check which branch you are in
 git branch
-# do some work
+## do some work
 git touch new_feature.txt
 git add new_feature.txt
 git commit -m "add new_feature.txt"
-# merge branch to master and delete
+## merge branch to master and delete
 git checkout master
 git merge <task_name>
 git branch -d <task_name>
 ```
 
-# Rollback
+## Rollback
 
 * Start over from the last commit
 
@@ -126,7 +126,7 @@ git reset --hard HEAD~
 git push origin -f
 ```
 
-# Use tags
+## Use tags
 
 * Annotate tags (e.g. set version)
 
@@ -155,7 +155,7 @@ git push --tag
 git pull --tag
 ```
 
-# Stash
+## Stash
 
 Remove unstaged changes temporary (except new files)
 
@@ -165,7 +165,7 @@ git pull # do some work
 git stash pop
 ```
 
-# Ignore changes
+## Ignore changes
 
 Sometimes you want to ignore changes to a specific file. For example, a file
 contains local IP address. It could be annoying to make sure these files are not
@@ -177,7 +177,7 @@ git update-index --skip-worktree <filename>     # Do not track changes
 git update-index --no-skip-worktree <filename>  # Track changes again
 ```
 
-# Submodule
+## Submodule
 
 * Get submodules after clone the repository
 
@@ -197,14 +197,14 @@ Submodules sometimes create temp files not included in ".gitignore". You can
 Ignore these files by adding "ignore = dirty" to .gitmodules
 
 ```
-# .gitmodules
+## .gitmodules
 [submodule "vim/bundle/vim-ruby"]
   path = vim/bundle/vim-ruby
   url = https://github.com/vim-ruby/vim-ruby.git
   ignore = dirty # Ignore changes under the path
 ```
 
-# Statistic
+## Statistic
 
 * count lines
 
@@ -212,7 +212,7 @@ Ignore these files by adding "ignore = dirty" to .gitmodules
 git ls-files | xargs cat | wc -l
 ```
 
-# Others
+## Others
 
 * Skip ssl certificate check
 

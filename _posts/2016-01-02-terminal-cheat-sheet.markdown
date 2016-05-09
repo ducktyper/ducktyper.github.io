@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Mac / Ubuntu Terminal Commands"
+title:  "Terminal Cheat Sheet"
 categories: notes
 ---
 
-# System
+## System
 
 * View disk space usage
 
@@ -19,7 +19,7 @@ lsof -i :<port> # check the process running on port
 kill -9 <PID>   # kill the process
 ```
 
-# Remote server (ubuntu)
+## Remote server (ubuntu)
 
 * Copy files to a remote server
 
