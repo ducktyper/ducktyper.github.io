@@ -58,8 +58,8 @@ ___________________     __________________     __________________
 ## Can you edit commits?
 
 Commits are `immutable` so you can't change any properties of a commit once
-it is created including id and message.
-You can use a rebase feature to edit commits but this actaully recreate the commits.
+it is created including the id and message.
+You can use a rebase feature to edit commits but this actually recreate the commits.
 For example when you have 10 commits and you edited a commit message of the
 second commit using rebase, git recreates the second commit and 8 followed commits
 because their parent ids are changed.
@@ -72,18 +72,18 @@ Untracted files are always ignored in any git operations.
 
 You can go back to a particular point in git history or switch to a different
 branch using checkout. The checkout process changes the working directory
-to match the checkout point. You won't see the changes added after that point
-and in other branch.
+to the checkout point. You won't see the changes added after that point
+and added in other branch.
 
 > Checkout ignores untracted files so they will servive from the checkout.
 
 > Checkout complains if you made changes not committed. The good practice is
 to make a clean state before run checkout.
 
-## Understand Graph
+## Understand Branch Graph
 
-You will see git graph when you play with any visual git applications.
-Git graph has circles represent commits and they are linked from the bottom to top.
+You will see branch graphs when you play with any visual git applications.
+A branch graph has circles represent commits and they are linked from the bottom to top.
 From the graph below, when you checkout the commit with id 4, then the working directory
 has the changes from commits 1 to 4 resulting having two files a.txt and b.txt.
 
@@ -92,11 +92,11 @@ has the changes from commits 1 to 4 resulting having two files a.txt and b.txt.
    |
   (4) Append "b" to b.txt   => [a.txt("a"), b.txt("b")]
    |
-  (3) Add b.txt
+  (3) Create b.txt
    |
   (2) Append "a" to a.txt
    |
-  (1) Add a.txt
+  (1) Create a.txt
 ```
 
 ## Understand Branch
