@@ -143,3 +143,83 @@ master -> (2)
            |
           (1) <- origin/master
 ```
+
+## How to get the latest changes from the remote
+
+You can update remote branches using `fetch` command.
+Fetch process looks through all remote branches and
+
+* Create branches not yet exist
+* Download commits yet have
+
+Before fetch
+
+```
+Working repository                   Remote repository
+_______________________________      ______________________________
+
+*master -> (2) <- origin/master       master -> (3)
+            |                                    |
+           (1)                                  (2) (4) <- branch1
+                                                 | /
+                                                (1)
+```
+
+After fetch
+
+```
+Working repository                   Remote repository
+_______________________________      ______________________________
+
+           (3) <- origin/master       master -> (3)
+            |                                    |
+*master -> (2) (4) <- origin/branch1            (2) (4) <- branch1
+            | /                                  | /
+           (1)                                  (1)
+```
+
+
+## What's different between local and remote branches
+
+A local branch `master` and remote branch `origin/master` are different branches.
+However, git provides a clever way to interact between branches having the same name.
+
+1. Checkout magick
+
+When you checkout to a branch yet exists, git looks for remote branches already
+has with the same name. If git finds one, git creates a new branch with the given
+name pointing to the same commit the remote branch is pointing to.
+
+```
+git checkout branch1
+
+Before                               After
+_______________________________      ______________________________
+
+              (3)<- origin/branch1     *branch1 -> (3) <- origin/branch1
+              /                                    /
+*master -> (2) <- origin/master       master -> (2) <- origin/master
+            |                                    |
+           (1)                                  (1)
+```
+
+2. Push magick
+
+When you push your branch to a remote for the first time, git creates and updates
+the branch to the remote branch. Also git creates a branch `origin/branch1`
+which points to the same commit `branch1` branch is pointing to.
+
+```
+git push origin branch1
+
+Before                               After
+_______________________________      ______________________________
+
+  branch1 -> (3)                       branch1 -> (3) <- origin/branch1
+             /                                    /
+master -> (2) <- origin/master       master -> (2) <- origin/master
+           |                                    |
+          (1)                                  (1)
+```
+
+Will continue ...
