@@ -183,6 +183,7 @@ _______________________________      ______________________________
 
 A local branch `master` and remote branch `origin/master` are different branches.
 However, git provides a clever way to interact between branches having the same name.
+Here is a list of magicks.
 
 1. Checkout magick
 
@@ -206,8 +207,8 @@ _______________________________      ______________________________
 2. Push magick
 
 When you push your branch to a remote for the first time, git creates and updates
-the branch to the remote branch. Also git creates a branch `origin/branch1`
-which points to the same commit `branch1` branch is pointing to.
+the branch to the remote branch with the same name. Also git creates a branch
+`origin/branch1` which points to the same commit `branch1` branch is pointing to.
 
 ```
 git push origin branch1
