@@ -89,7 +89,7 @@ to make a clean state before run checkout.
 You will see branch graphs when you play with any visual git applications.
 A branch graph has circles represent commits and they are linked from the bottom to top.
 From the graph below, when you checkout the commit with id 4, then the working directory
-has the changes from commits 1 to 4 resulting having two files a.txt and b.txt.
+is applied the changes from commits with ids from 1 to 4 resulting having two files a.txt and b.txt.
 
 ```
   (5) Delete a.txt          => [b.txt("b")]
@@ -131,7 +131,7 @@ from the remote repository. When you clone a repository, git creates a remote
 ## Where branches from remotes are saved?
 
 Git saves branches from remotes as the same way as local branches.
-The `master` branch in the `origin` remote is saved as a branch with name
+The `master` branch in the `origin` remote is saved as a branch with the name
 `origin/master`. However, remote branches are normally hidden from you
 unless you order to show them.
 
@@ -181,7 +181,7 @@ _______________________________      ______________________________
 
 ## What's different between local and remote branches
 
-A local branch `master` and remote branch `origin/master` are different branches.
+The local branch `master` and remote branch `origin/master` are different branches.
 However, git provides a clever way to interact between branches having the same name.
 Here is a list of magicks.
 
@@ -206,9 +206,9 @@ _______________________________      ______________________________
 
 2. Push magick
 
-When you push your branch to a remote for the first time, git creates and updates
-the branch to the remote branch with the same name. Also git creates a branch
-`origin/branch1` which points to the same commit `branch1` branch is pointing to.
+When you push your branch to the remote for the first time, git creates and updates
+the branch to the remote branch with the same name. Also git creates the branch
+`origin/branch1` which points to the same commit the `branch1` branch is pointing to.
 
 ```
 git push origin branch1
