@@ -223,4 +223,31 @@ master -> (2) <- origin/master       master -> (2) <- origin/master
           (1)                                  (1)
 ```
 
-Will continue ...
+## What happends when you merge changes from another branch
+
+You can update new changes from another branch using the command `merge`.
+
+The merge command looks new commits in the target branch (merge from) which are
+not in the current branch (merge to) and apply them to the current branch.
+
+The simplest way the git uses is to point the commit the target branch (merge from)
+is pointing to. This solution is called `fast-forward`.
+
+```
+git merge branch1
+
+Before                               After
+_______________________________      ______________________________
+
+
+              (3) <- branch1         *master -> (3) <- branch1
+              /                                  |
+*master -> (2)                                  (2)
+            |                                    |
+           (1)                                  (1)
+```
+
+However, this solution does not work if the `master` branch has changes not
+in the `branch1` branch in the example.
+
+to be continue ...
