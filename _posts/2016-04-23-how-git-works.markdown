@@ -284,7 +284,7 @@ _______________________________      ______________________________
 ```
 
 ```
-Commits order in the master branch after the merge
+The order of commits in the master branch after the merge
 
 (1) -> (3) -> (2) -> (4)
 ```
