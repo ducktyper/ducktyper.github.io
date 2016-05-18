@@ -230,7 +230,7 @@ You can update new changes from another branch using the command `merge`.
 The merge command looks new commits in the target branch (merge from) which are
 not in the current branch (merge to) and apply them to the current branch.
 
-The simplest way the git uses is to point the commit the target branch (merge from)
+The simplest way the git does is to point the commit the target branch (merge from)
 is pointing to. This solution is called `fast-forward`.
 
 ```
@@ -240,14 +240,52 @@ Before                               After
 _______________________________      ______________________________
 
 
-              (3) <- branch1         *master -> (3) <- branch1
+              (2) <- branch1         *master -> (2) <- branch1
               /                                  |
-*master -> (2)                                  (2)
-            |                                    |
+*master -> (1)                                  (1)
+```
+
+However, this solution does not work if the current branch (merge to) has changes
+not in the target branch (merge from) like below.
+
+```
+git merge branch1
+
+Before                               Not working (Loose commit(3))
+_______________________________      ______________________________
+
+*master -> (3) (2) <- branch1                   (3) (2) <- branch1 <- *master
+            | /                                  | /
            (1)                                  (1)
 ```
 
-However, this solution does not work if the `master` branch has changes not
-in the `branch1` branch in the example.
+Becuase each commit has the parent commit id can't be changed, there is no way
+to merge commit(3) and commit(2) without re-creating one of them. In this case,
+git creates one more commit having an extra parent id which called `merge commit`.
+If you see the commit history of the `master` branch after the merge, you will see
+new commits in the `branch1` branch are displayed followed by the merge commit.
+
+Same as other commits, merge commits also can include changes and we normally
+use it for solving conflicts.
+
+```
+git merge branch1
+
+Before                               After
+_______________________________      ______________________________
+
+                                     *master -> (4)
+                                                 | \
+                                                 |  (2) <- branch1
+                                                 |   |
+*master -> (3) (2) <- branch1                   (3)  |
+            | /                                  | /
+           (1)                                  (1)
+```
+Commits order in the master branch after the merge
+
+(1) -> (3) -> (2) -> (4)
+``
+
 
 to be continue ...
