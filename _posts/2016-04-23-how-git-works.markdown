@@ -230,8 +230,8 @@ You can update new changes from another branch using the command `merge`.
 The merge command looks new commits in the target branch (merge from) which are
 not in the current branch (merge to) and apply them to the current branch.
 
-The simplest way the git does is to point the commit the target branch (merge from)
-is pointing to. This solution is called `fast-forward`.
+The simplest way git handles the merge is to move the current branch to point
+where the target branch is pointing to. This solution is called `fast-forward`.
 
 ```
 git merge branch1
@@ -261,9 +261,9 @@ _______________________________      ______________________________
 
 Becuase each commit has the parent commit id can't be changed, there is no way
 to merge commit(3) and commit(2) without re-creating one of them. In this case,
-git creates one more commit having an extra parent id which called `merge commit`.
+git creates one more commit having an extra parent id which is called `merge commit`.
 If you see the commit history of the `master` branch after the merge, you will see
-new commits in the `branch1` branch are displayed followed by the merge commit.
+new commits in the `branch1` branch followed by the merge commit.
 
 Same as other commits, merge commits also can include changes and we normally
 use it for solving conflicts.
@@ -282,10 +282,12 @@ _______________________________      ______________________________
             | /                                  | /
            (1)                                  (1)
 ```
+
+```
 Commits order in the master branch after the merge
 
 (1) -> (3) -> (2) -> (4)
-``
+```
 
 
 to be continue ...
