@@ -1,6 +1,6 @@
 # Site settings
 title: Ducktyper's blog
-description: > # this means to ignore newlines until "baseurl:"
+description: >
   Anything about programming
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://ducktyper.co.nz" # the base hostname & protocol for your site
@@ -9,3 +9,7 @@ github_username:  ducktyper
 # Build settings
 markdown: kramdown
 timezone: Pacific/Auckland
+
+theme: jekyll-theme-slate
+show_downloads: false
+# google_analytics: ''
