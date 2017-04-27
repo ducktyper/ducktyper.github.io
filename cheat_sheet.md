@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Notes
-permalink: /notes/
+title: Cheat Sheet
+permalink: /cheat_sheet/
 ---
 
 <div class="notes">
 
   <ul class="post-list">
-    {% for post in site.categories['notes'] %}
+    {% for post in site.categories['cheat_sheet'] %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 

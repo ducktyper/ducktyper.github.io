@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Git Cheat Sheet"
-categories: notes
+categories: cheat_sheet
 ---
 
 ## Install git

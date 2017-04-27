@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Terminal Cheat Sheet"
-categories: notes
+categories: cheat_sheet
 ---
 
 ## System
